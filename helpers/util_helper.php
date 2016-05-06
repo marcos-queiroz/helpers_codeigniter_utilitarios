@@ -57,6 +57,7 @@ if (!function_exists('remove_caracteres')) {
         $str = preg_replace('/[^a-z0-9]/i', '_', $str);
         $str = preg_replace('/_+/', '_', $str);
         
+        //se $strtolower for true, transforma os caracteres em minusculos.
         if($strtolower){
             $str = strtolower($str);
         }
