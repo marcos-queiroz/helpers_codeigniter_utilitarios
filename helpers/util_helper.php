@@ -110,3 +110,22 @@ if (!function_exists('retorna_data')) {
     }
 
 }
+
+/**
+* Função para exibir a URL url_atual
+* @retunr String
+*/
+
+
+if (!function_exists('url_atual')) {
+
+    function url_atual() {
+        $base = base_url();
+        $link = "";
+        if(isset($_SERVER['PATH_INFO'])){
+            $link = substr($_SERVER['PATH_INFO'], 1);
+        }
+        return $base . $link;
+    }
+
+}
