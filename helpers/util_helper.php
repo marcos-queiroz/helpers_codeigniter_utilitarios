@@ -114,7 +114,7 @@ if (!function_exists('retorna_data')) {
 
 /**
 * Função para exibir a URL url_atual
-* @retunr String
+* @return String
 */
 
 
@@ -146,6 +146,19 @@ if (!function_exists('alert')) {
 
         $CI->session->set_flashdata('msg', $msg);
         $CI->session->set_flashdata('msg_type', $type);
+    }
+
+}
+
+/**
+* Função para exibir a versão do CMS
+* @return String
+*/
+
+if (!function_exists('versao_bee')) {
+
+    function versao_bee() {
+        return 'Versão 1.0.2';
     }
 
 }
