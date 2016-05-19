@@ -130,3 +130,22 @@ if (!function_exists('url_atual')) {
     }
 
 }
+
+/**
+* Função para armazer no FlashData da sessão
+* @param type $msg - String 
+* @param type $type - String 
+*/
+
+if (!function_exists('alert')) {
+
+    function alert($msg = null, $type = 'success') 
+    {
+        $CI = & get_instance();
+        $CI->load->library('session');
+
+        $CI->session->set_flashdata('msg', $msg);
+        $CI->session->set_flashdata('msg_type', $type);
+    }
+
+}
